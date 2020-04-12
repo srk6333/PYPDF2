@@ -1,5 +1,5 @@
 import PyPDF2
-pdfFileObject = open(r"automatetheboringstuffwithpython_new.pdf", 'rb')
+pdfFileObject = open(r"your pdf", 'rb')
 key = input('Enter the word to Search :')
 pdfReader = PyPDF2.PdfFileReader(pdfFileObject)
 pdfWritter = PyPDF2.PdfFileWriter()
