@@ -8,14 +8,14 @@ count = 0
 #open output file 
 file = open('out_put_file','w')
 print(" No. Of Pages :", pdfReader.numPages)
-for i in range(pdfReader.numPages):
-    pageObject = pdfReader.getPage(i)
+for page in range(pdfReader.numPages):
+    pageObject = pdfReader.getPage(page)
     text = pageObject.extractText()
     #searching for key
     if key in text or key.capitalize() in text or key.upper() in text or key.lower() in text:
         count = count + 1
-        print('found',i)
-        file.write(str(i+1)+'\n')
+        print('found',page)
+        file.write(str(page)+'\n')
 
 print('Count of the word', count)
 file.close()
